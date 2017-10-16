@@ -1,0 +1,7 @@
+Neos:
+  Flow:
+    security:
+      authentication:
+        providers:
+          'Neos.Neos:Backend':
+            provider: 'Flownative\Neos\MultisiteHelper\PersistedUsernamePasswordProvider'
