@@ -68,7 +68,7 @@ class PersistedUsernamePasswordProvider extends FlowPersistedUsernamePasswordPro
         ObjectAccess::setProperty($this->authenticationManager, 'isAuthenticated', true, true);
 
         $domain = $this->domainRepository->findOneByActiveRequest();
-        if ($domain !== null) {
+        if ($domain === null) {
             if (!$this->securityContext->hasRole('Neos.Neos:Administrator')) {
                 $this->securityLogger->log('No domain found and user has not assigned "Neos.Neos:Administrator", rolling back.', LOG_DEBUG);
                 $this->rollback($authenticationToken);
