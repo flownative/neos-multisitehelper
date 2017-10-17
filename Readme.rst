@@ -8,6 +8,18 @@ sites created by the Neos Multisite Kickstarter.
 Furthermore it provides an authentication provider that gracefully denies login
 if a user has no access to a site she tries to log in to.
 
+Installation
+============
+
+``composer require flownative/neos-multisitehelper``
+
+.. note::
+    Usually this package is required by a site package and thus installed
+    along with the depending site automatically.
+
+    Only if you keep your site package in your Neos distribution (and not
+    install it using composer), manual installation is needed.
+
 Command Usage
 =============
 
