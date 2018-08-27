@@ -1,3 +1,7 @@
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Packagist](https://img.shields.io/packagist/v/flownative/neos-multisitehelper.svg)](https://packagist.org/packages/flownative/neos-multisitehelper)
+[![Maintenance level: Friendship](https://img.shields.io/badge/maintenance-%E2%99%A1%E2%99%A1-ff69b4.svg)](https://www.flownative.com/en/products/open-source.html)
+
 # Multisite Helper for Neos
 
 The Neos Multisite Helper contains a tool to create asset collections for sites created by the Neos Multisite Kickstarter.
