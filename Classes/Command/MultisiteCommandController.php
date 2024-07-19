@@ -1,4 +1,5 @@
 <?php
+
 namespace Flownative\Neos\MultisiteHelper\Command;
 
 /*
@@ -13,6 +14,8 @@ namespace Flownative\Neos\MultisiteHelper\Command;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Cli\CommandController;
+use Neos\Flow\ObjectManagement\Exception\UnresolvedDependenciesException;
+use Neos\Flow\Persistence\Exception\IllegalObjectTypeException;
 use Neos\Media\Domain\Model\AssetCollection;
 use Neos\Media\Domain\Repository\AssetCollectionRepository;
 use Neos\Neos\Domain\Model\Site;
@@ -42,8 +45,9 @@ class MultisiteCommandController extends CommandController
      *
      * @param string $siteNodeName
      * @return void
+     * @throws IllegalObjectTypeException|UnresolvedDependenciesException
      */
-    public function setupCommand($siteNodeName)
+    public function setupCommand($siteNodeName): void
     {
         $assetCollectionTitle = ucfirst($siteNodeName);
         $assetCollection = $this->assetCollectionRepository->findOneByTitle($assetCollectionTitle);
